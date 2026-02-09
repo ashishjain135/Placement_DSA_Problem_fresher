@@ -33,10 +33,10 @@ public class Marks {
             return;
         }
 
-        int totalMarks = maths+ bio + eng+ hindi+ social; 
-        double percentage = (totalMarks/500.0)*100; 
-        System.out.println(totalMarks);
-        System.out.printf("%.2f\n", percentage);
+            int totalMarks = maths+ bio + eng+ hindi+ social; 
+            double percentage = (totalMarks/500.0)*100; 
+            System.out.println(totalMarks);
+            System.out.printf("%.2f\n", percentage);
 
         
         //if student fail in any subject
