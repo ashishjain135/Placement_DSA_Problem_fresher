@@ -1,3 +1,4 @@
+
 /**
  * Problem Statement – An automobile company manufactures both a two wheeler (TW) and a four 
 wheeler (FW). A company manager wants to make the production of both types of vehicle according to 
@@ -23,21 +24,22 @@ Print “INVALID INPUT” , if inputs did not meet the constraints.
  */
 
 import java.util.*;
+
 public class twoWheeFourWhee {
-    public static void main(String[]args){
+    public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        int v = scn.nextInt(); //total number of vehicles 
-        int w = scn.nextInt(); //total numbe of tyres 
+        int v = scn.nextInt(); // total number of vehicles
+        int w = scn.nextInt(); // total numbe of tyres
         System.out.println("Total number of vehicles is " + v);
         System.out.println("Total number of wheelers is " + w);
-
-        if(v >= w){
+        scn.close();
+        if (v >= w) {
             System.out.println("Invalid value");
             return;
         }
-        int extraWheeler  = (w - 2 * v);
-        int numberOf4Wheelers = extraWheeler/2;
-        if(extraWheeler % 2 != 0) {
+        int extraWheeler = (w - 2 * v);
+        int numberOf4Wheelers = extraWheeler / 2;
+        if (extraWheeler % 2 != 0) {
             System.out.println("Invalid value");
             return;
         }
