@@ -46,7 +46,7 @@ length = 3
             }
             i++;
         }
-        return length;
+        return (length == Integer.MAX_VALUE) ? 0 : length;
     }
     public static void main(String[]args){
         Scanner scn = new Scanner(System.in);
