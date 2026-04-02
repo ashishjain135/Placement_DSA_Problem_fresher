@@ -1,4 +1,6 @@
+
 public class numberReduce {
+
     public static int numSteps(String s) {
         // int decimal = Integer.parseInt(s, 2);
         // int decimal = 0;
@@ -17,23 +19,24 @@ public class numberReduce {
         // }
         // return count;
 
-
         int count = 0;
         int carry = 0;
-        for(int i = s.length() -1; i>0; i--){
+        for (int i = s.length() - 1; i > 0; i--) {
             int bit = s.charAt(i) - '0' + carry;
-            if(bit == 1){
+            if (bit == 1) {
                 count += 2;
-                carry = 1; 
-            }else{
+                carry = 1;
+            } else {
                 count += 1;
             }
         }
-        return count+ carry;
+        return count + carry;
 
     }
-    public static void main(String[]args){
-        String s = "1111011110000011100000110001011011110010111001010111110001";
+
+    public static void main(String[] args) {
+        // String s = "1111011110000011100000110001011011110010111001010111111000";
+        String s = "1010";
         System.out.println(numSteps(s));
     }
 }
