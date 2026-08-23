@@ -1,0 +1,123 @@
+🏛️ Problem Statement
+Create a class KYC with the following private attributes:
+panCardNumber (String)
+accountIdentificationType (String)
+accountIdentification (String)
+status (String)
+Write a public parameterized constructor, along with getters and setters for all attributes.
+Create another class BankAccount with the following private attributes:
+accId (String)
+accHolderName (String)
+accType (String)
+occupation (String)
+kyc (KYC Object)
+Write a public parameterized constructor, along with getters and setters for all attributes.Create a public class Solution with a main method and implement the following two static methods:
+1. findKycStatusCountByOccupationParameters: An array of BankAccount objects and a String parameter occupation.
+Logic: Calculate and return the total count of bank accounts matching the given occupation (case-insensitive) whose KYC status attribute is exactly "APPROVED" (case-insensitive).
+Return Type: int. If no matching accounts are found, return 0.
+2. getAccountDetailsByPanParameters: An array of BankAccount objects and a String parameter panCardNumber.
+Logic: Search for the bank account that matches the given PAN card number (case-insensitive).
+Return Type: BankAccount object. If no record matches the criteria, return null.
+📥 Input Format for Main MethodThe program must accept data for 4 bank account records sequentially.For each bank account, data must be provided in the following exact order:
+accId
+accHolderName
+accType
+occupation
+panCardNumber
+accountIdentificationType
+accountIdentification
+status
+The next input line will be the search occupation string.
+The final input line will be the search panCardNumber string.
+
+📤 Output Format for Main MethodPrint the numeric count returned by the first method. 
+If the count is 0, print: "No accounts found with approved KYC status".
+For the second method, 
+print the 
+accId, 
+accHolderName, and 
+accType separated by single spaces. 
+If the returned object is null, print: "No account found with the given PAN".
+
+🧪 Sample Test Cases
+🔹 Test Case 1
+Sample Input:text
+ACC101
+John Doe
+Savings
+Salaried
+ABCDE1234F
+Aadhar
+9876543210
+APPROVED
+ACC102
+Jane Smith
+Current
+Business
+XYZWR5678G
+VoterID
+456789123
+PENDING
+ACC103
+Alex Jones
+Savings
+Salaried
+PQRST9999H
+Passport
+A1234567
+APPROVED
+ACC104
+Mary Ross
+Savings
+Student
+LMNOP4444J
+Aadhar
+1122334455
+REJECTED
+Salaried
+XYZWR5678G
+  
+Sample Output:text
+2
+ACC102 
+Jane Smith 
+Current
+  
+🔹 Test Case 2Sample Input:text
+ACC201
+Alice Green
+Current
+Business
+BBBBB1111A
+Aadhar
+5555666677
+PENDING
+ACC202
+Bob White
+Savings
+Student
+CCCCC2222B
+VoterID
+8888999900
+APPROVED
+ACC203
+Charlie Brown
+Savings
+Business
+DDDDD3333C
+Passport
+Z9998887
+APPROVED
+ACC204
+David Black
+Current
+Salaried
+EEEEE4444D
+Aadhar
+4444333322
+REJECTED
+Business
+K12345678L
+Sample Output:text1
+No account found with the given PAN
+  
