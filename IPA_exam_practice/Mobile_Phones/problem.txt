@@ -1,0 +1,149 @@
+Practice Question — Mobile Phone
+Class Mobile
+
+Create a class Mobile with the following private attributes:
+
+mobileId = int
+brand = String
+model = String
+price = double
+rating = double
+
+Create:
+
+Parameterized constructor
+Getters and setters for all attributes
+Class MyClass
+
+Create a class MyClass with main() method.
+
+Implement the following two static methods:
+
+1. findMobileByBrand
+public static Mobile findMobileByBrand(Mobile[] mobiles, String brand)
+
+This method takes an array of Mobile objects and a String brand as input.
+
+It should find the first Mobile object whose brand matches the given brand.
+
+Matching should be case-insensitive.
+If found, return that Mobile object.
+If no mobile is found, return null.
+Main method
+
+If the returned object is not null, print:
+
+Mobile ID
+Model
+Price
+
+Each on a separate line.
+
+If returned value is null, print:
+
+No mobile found
+
+
+2. sortMobilesByPrice
+public static Mobile[] sortMobilesByPrice(Mobile[] mobiles, double maxPrice)
+
+This method should:
+
+Select only those mobiles whose:
+price < maxPrice
+AND rating >= 4.0
+Sort the selected mobiles in ascending order of price.
+If two mobiles have the same price, sort them in descending order of rating.
+Return the sorted array.
+If no mobile satisfies the conditions, return null.
+Main method
+
+If the returned array is not null, print the model name of each mobile.
+
+Otherwise print:
+
+No mobiles found
+Input 1
+101
+Samsung
+GalaxyS24
+79999
+4.5
+102
+Apple
+iPhone15
+69999
+4.2
+103
+OnePlus
+12R
+42999
+4.1
+104
+Samsung
+GalaxyA55
+39999
+3.9
+Apple
+75000
+
+Expected Output
+102
+iPhone15
+69999.0
+12R
+iPhone15
+
+
+🔥 Input 2 — Trickier
+
+101
+Samsung
+GalaxyS24
+70000
+4.5
+102
+Apple
+iPhone15
+50000
+4.0
+103
+OnePlus
+12R
+50000
+4.5
+104
+Vivo
+V30
+45000
+4.2
+OnePlus
+10000
+
+
+Expected Output
+103
+12R
+50000.0
+No mobiles found
+
+Why?
+
+Search:
+
+OnePlus
+
+finds:
+
+103
+12R
+50000
+
+But sorting condition is:
+
+price < maxPrice
+
+Given:
+
+maxPrice = 10000
+ is false, so no mobile qualifies.
